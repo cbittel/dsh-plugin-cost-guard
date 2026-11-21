@@ -1,0 +1,11 @@
+# dsh-plugin-cost-guard bundle patch: inserts the single host-only plugin row
+# into a profile roster. Applied as a profile bundle layer (the
+# `dsh.bundle.patch` manifest field).
+#
+# `name` must be the npm package name (the loader resolves it from the
+# profile's node_modules). `id` is load-bearing: it is the loader entry id and
+# the settings namespace. Duplicate entry ids abort bundle composition, so do
+# NOT also insert a row for this plugin from the profile's own cordis.patch.yml.
+- insert:
+    - id: cost-guard
+      name: 'dsh-plugin-cost-guard'
