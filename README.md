@@ -31,6 +31,8 @@ For years outside 2025–2027 the tool reports `holidayData: "none"` and asks yo
 
 DeepSeek does not publish a fixed context-cache TTL. This plugin **estimates** a cache hit from recent tab activity: if the session saw activity within the cache TTL (default **60 min**), the state is `CACHE HIT (est.)`. The label is explicit about being an estimate.
 
+Switching the model inside a session resets the estimate: DeepSeek's context cache is per-model, so the new model starts cold. The plugin watches the active session's model selection (`uiSession` + `modelDirectories`) and clears the activity timestamp on a model switch, falling back to `unknown` (yellow-green) instead of claiming a cache hit.
+
 ## Install
 
 From GitHub:
