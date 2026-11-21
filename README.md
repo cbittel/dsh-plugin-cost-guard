@@ -4,7 +4,7 @@ A [DeepSeek Harness](https://github.com/deepseek-ai) plugin that shows, at a gla
 
 ## What it adds
 
-- **Always-visible badge** — top-right of the web GUI (below the native window controls in the desktop app) with a live color state.
+- **Always-visible badge** — top-right, with a configurable offset below the DSH top bar (and below the native window controls in the desktop app). Double-click collapses it to a small dot (keeping the live color) and back.
 - **`Cost Guard` sidebar tab** — full details and configuration.
 - **`cost_status` agent tool** — the same state, machine-readable.
 
@@ -52,7 +52,12 @@ Then **restart DeepSeek Harness** so the client bundle is served (client bundles
 In the **Cost Guard** sidebar tab:
 
 - **Cache TTL (minutes)** — activity within this window counts as an estimated cache hit.
+- **Badge top offset (px)** — vertical clearance below the DSH top bar; raise it if the badge still overlaps the shell controls (default `56`).
 - **Extra holidays** — add `YYYY-MM-DD` Beijing dates (one per line) beyond the built-in 2025–2027 list.
+
+### Badge behavior
+
+- **Double-click** the badge to collapse it to a small dot (it keeps the live state color); double-click again to expand it.
 
 ## Requirements
 
