@@ -41,7 +41,7 @@ From GitHub:
 plugin_manager install_bundle github:cbittel/dsh-plugin-cost-guard
 ```
 
-From npm (if published there):
+From npm:
 
 ```
 plugin_manager install_bundle dsh-plugin-cost-guard
