@@ -47,6 +47,12 @@ From npm:
 plugin_manager install_bundle dsh-plugin-cost-guard
 ```
 
+From the DSH plugin marketplace: add this index URL in the **Discover** tab, then install `dsh-plugin-cost-guard` from the list:
+
+```
+https://raw.githubusercontent.com/cbittel/dsh-plugin-cost-guard/main/market/index.json
+```
+
 Then **restart DeepSeek Harness** so the client bundle is served (client bundles are snapshotted at app start).
 
 ## Configuration
